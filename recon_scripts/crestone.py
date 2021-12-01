@@ -3,9 +3,9 @@ import pandas as pd
 
 def read_source(path):
     df = pd.read_csv(path)
-    df.rename(inplace=True, {'theirs': 'mine'})
-    df['my_str'].fillna(inplace=True, '')
-    df = df.dropna(subset=['number_columns']
+    df.rename(inplace=True, columns={'theirs': 'mine'})
+    df['my_str'].fillna('', inplace=True)
+    df = df.dropna(subset=['number_columns'])
     return df
 
 
