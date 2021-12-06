@@ -11,3 +11,9 @@ def read_source(path):
 
 def answer_to_life_and_everything(df):
     return 42
+
+
+def reverse_number(number: int) -> int:
+    str_number = str(number)
+    str_number_reversed = str_number[-1::-1]
+    return int(str_number_reversed)
